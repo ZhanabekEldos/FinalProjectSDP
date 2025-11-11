@@ -1,11 +1,14 @@
 package bridge;
 
-public abstract class Product {
-    protected ProductType productType;
+public class DigitalProduct extends Product {
 
-    public Product(ProductType type) {
-        this.productType = type;
+    public DigitalProduct(ProductType type) {
+        super(type);
     }
 
-    public abstract void showDetails();
+    @Override
+    public void showDetails() {
+        System.out.print("Digital Product: ");
+        productType.showType();
+    }
 }

@@ -1,8 +1,14 @@
 package bridge;
 
-public class DigitalProduct implements ProductType {
+public class PhysicalProduct extends Product {
+
+    public PhysicalProduct(ProductType type) {
+        super(type);
+    }
+
     @Override
-    public void showType() {
-        System.out.println("This is a digital product (instant download).");
+    public void showDetails() {
+        System.out.print("Physical Product: ");
+        productType.showType();
     }
 }
